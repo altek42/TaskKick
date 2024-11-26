@@ -1,0 +1,8 @@
+port: 8080
+buttons:
+  - label: "Odczytaj plik"
+    description: "Wyświetla zawartość pliku testowego"
+    command: "cat /mnt/c/Project/TaskKick/test.txt"
+  - label: "Restart aplikacji"
+    description: "Restartuje aplikację na serwerze"
+    command: "cat /mnt/c/Project/TaskKick/test.txt"
