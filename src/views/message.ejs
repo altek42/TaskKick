@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskKick</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>TaskKick - Zarządzanie zadaniami</h1>
+        <% if (error) { %>
+            <div class="error-message">
+                <pre><%= error %></pre>
+            </div>
+        <% } %>
+        <% if (sucess) { %>
+            <div class="sucess-message">
+                <p><%= sucess %></p>
+            </div>
+        <% } %>
+        <div class="back-button-container">
+            <a href="/" class="restart-button back-button">Powrót</a>
+        </div>
+    </div>
+</body>
+</html>

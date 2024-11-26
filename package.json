@@ -1,0 +1,14 @@
+{
+    "name": "task-kick",
+    "version": "1.0.0",
+    "description": "Prosta aplikacja Node.js do wykonywania zadań",
+    "main": "server.js",
+    "scripts": {
+        "start": "node src/server.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^4.18.2",
+        "uuid": "^11.0.3"
+    }
+}

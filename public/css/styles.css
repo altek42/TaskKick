@@ -1,0 +1,101 @@
+body {
+    background-color: #F5F5F5;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Wyśrodkowanie w poziomie */
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Opcjonalne tło */
+}
+
+
+h1 {
+    color: #333333;
+    font-size: 36px;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #E63946;
+    margin: 10px auto;
+}
+
+.restart-button {
+    background-color: #E63946;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 0; 
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 200px; 
+    text-align: center; 
+}
+
+.restart-button:hover {
+    background-color: #FFA500;
+}
+
+
+#buttons span {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666666;
+    font-style: italic;
+}
+
+.error-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #FFE5E5;
+    color: #E63946;
+    border: 1px solid #E63946;
+    border-radius: 5px;
+    font-family: monospace;
+    text-align: left;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button-container form {
+    margin: 0;
+}
+
+.button-container span {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666666;
+    font-style: italic;
+}
+
+.back-button-container {
+    margin-top: 20px; 
+}
+
+.back-button {
+    text-decoration: none;
+    padding: 10px 20px; 
+    font-size: 12px;
+}
+
+.back-button:hover {
+    background-color: #FFA500; 
+}
