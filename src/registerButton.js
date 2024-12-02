@@ -17,7 +17,7 @@ const renderResponse = (res, error) => {
   });
 };
 
-const registerButton = (app, label, description, command) => {
+const registerButton = (app, label, description, command, separator = false) => {
   const newUuid = uuidv4();
   const path = "/" + newUuid;
   logger(`Register ${path} as "${label}"`);
@@ -26,6 +26,7 @@ const registerButton = (app, label, description, command) => {
     label: label,
     action: path,
     description,
+    separator,
   });
 
   app.post(path, (req, res) => {

@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 
 config.buttons.forEach((button) => {
-  registerButton(app, button.label, button.description, button.command);
+  registerButton(app, button.label, button.description, button.command, button.separator);
 });
 
 app.get("/", (req, res) => {

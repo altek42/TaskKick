@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskKick</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script>
+        // Funkcja do pokazania ekranu ładowania
+        function showLoading() {
+            document.getElementById('loading-screen').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -12,12 +18,22 @@
         <div id="buttons">
             <% buttons.forEach(button => { %>
                 <div class="button-container">
-                    <form action="<%= button.action %>" method="post">
+                    <form action="<%= button.action %>" method="post" onsubmit="showLoading()">
                         <button class="restart-button" type="submit"><%= button.label %></button>
                     </form>
                     <span><%= button.description %></span>
                 </div>
+                <% if (button.separator) { %>
+                    <hr class="separator-line">
+                <% } %>
             <% }) %>
+        </div>
+    </div>
+
+    <div id="loading-screen" style="display: none;">
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Przetwarzanie, proszę czekać...</p>
         </div>
     </div>
 </body>
